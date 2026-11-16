@@ -25,7 +25,7 @@ IMAGES = {
     '08c6d19b': 'img/app-icon.png',
 }
 FLAGS = {'pakistan': 'pk', 'mauritius': 'mu', 'portugal': 'pt', 'belgium': 'be', 'chile': 'cl',
-         'bosnia and herzegovina': 'ba', 'norway': 'no'}
+         'bosnia and herzegovina': 'ba', 'norway': 'no', 'brazil': 'br'}
 EMOJI = {'Emoji/Man Biking': 'biking', 'Emoji/Flexed Biceps': 'biceps', 'Emoji/Ring': 'ring',
          'Emoji/Waving Hand 32': 'wave', 'Emoji/Waving Hand': 'wave'}
 ICONS = {'Icon/Filters': 'filters', 'Icon/Hearts': 'hearts', 'Icon/Profile': 'profile', 'Icon/Map': 'map',
@@ -174,7 +174,9 @@ def render_leaf(n, ox, oy, ctx):
     if comp == 'HomeIndicator':
         return f'<div class="n home-ind" data-name="{name}" style="{box}"><i></i></div>'
     if comp == 'Flag':
-        code = FLAGS.get((n.get('swap') or '').lower())
+        swap = (n.get('swap') or '').lower()
+        swap = ctx.conf.get('flag_override', {}).get(swap, swap)
+        code = FLAGS.get(swap)
         return f'<img class="n flag" data-name="{name}" alt="" src="../assets/flags/{code}.png" style="{box}">' if code else ''
     if comp in EMOJI or (comp.startswith('Emoji/') and n.get('swap') in ('Waving Hand',)):
         return f'<img class="n" data-name="{name}" alt="" src="../assets/emoji/{EMOJI.get(comp, "wave")}.png" style="{box}">'

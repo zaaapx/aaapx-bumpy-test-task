@@ -4,102 +4,375 @@
     "heading": "Current flow",
     "lead": "Liked You for a free user as it works in the app today: push → Liked You → reveal sheet or paywall → profile → Like → Bump → chat.",
     "other": "<p class=\"other\">Compare with <a href=\"../h1/\">H1 · Proof of real →</a></p>",
-    "backgrounds": { "Background · Liked You": "25:303" },
+    "backgrounds": {
+      "Background · Liked You": "25:303"
+    },
     "screens": [
-      { "id": "209:1763", "title": "00 · Push on lock screen", "note": "<b>Push</b> “Someone liked your profile”. Tap the notification." },
-      { "id": "25:303", "title": "Liked You · free", "note": "<b>Liked You</b> with blurred cards and the gold CTA. Tap a card → reveal sheet · <i>See who liked you</i> → paywall." },
-      { "id": "53:897", "title": "01 · Free Reveal sheet", "note": "<b>Reveal sheet</b>. Watch Ad → ad → profile · See who liked you → paywall · X → back." },
-      { "id": "219:2241", "title": "Rewarded ad", "note": "<b>Rewarded ad</b> placeholder, 3 s, then the revealed profile." },
-      { "id": "53:940", "title": "02 · Get Gold paywall", "note": "<b>Paywall</b>. The purchase itself is not part of this flow. X → back." },
-      { "id": "53:1013", "title": "03 · Profile after reveal", "note": "<b>Revealed profile</b>. Like → dialog · Pass or scrim → Liked You." },
-      { "id": "53:1072", "title": "04 · Really interested? dialog", "note": "<b>Dialog</b>. Like → free Like offer · Later → profile." },
-      { "id": "54:1406", "title": "05 · Free Like (watch ad)", "note": "<b>Free Like offer</b>. Watch Ad → Bump · Get 3 Likes per day → paywall · X → profile." },
-      { "id": "54:1491", "title": "06 · Liked You · New Bump", "note": "<b>New Bump</b> banner. Tap it or Chats → chats." },
-      { "id": "54:1616", "title": "07 · Chats with new Bump", "note": "<b>Chats</b> with the new Bump. Promo banner → paywall · Liked You tab → Liked You." }
+      {
+        "id": "209:1763",
+        "title": "00 · Push on lock screen",
+        "note": "<b>Push</b> “Someone liked your profile”. Tap the notification."
+      },
+      {
+        "id": "25:303",
+        "title": "Liked You · free",
+        "note": "<b>Liked You</b> with blurred cards and the gold CTA. Tap a card → reveal sheet · <i>See who liked you</i> → paywall."
+      },
+      {
+        "id": "53:897",
+        "title": "01 · Free Reveal sheet",
+        "note": "<b>Reveal sheet</b>. Watch Ad → ad → profile · See who liked you → paywall · X → back."
+      },
+      {
+        "id": "219:2241",
+        "title": "Rewarded ad",
+        "note": "<b>Rewarded ad</b> placeholder, 3 s, then the revealed profile."
+      },
+      {
+        "id": "53:940",
+        "title": "02 · Get Gold paywall",
+        "note": "<b>Paywall</b>. The purchase itself is not part of this flow. X → back."
+      },
+      {
+        "id": "53:1013",
+        "title": "03 · Profile after reveal",
+        "note": "<b>Revealed profile</b>. Like → dialog · Pass or scrim → Liked You."
+      },
+      {
+        "id": "53:1072",
+        "title": "04 · Really interested? dialog",
+        "note": "<b>Dialog</b>. Like → free Like offer · Later → profile."
+      },
+      {
+        "id": "54:1406",
+        "title": "05 · Free Like (watch ad)",
+        "note": "<b>Free Like offer</b>. Watch Ad → Bump · Get 3 Likes per day → paywall · X → profile."
+      },
+      {
+        "id": "54:1491",
+        "title": "06 · Liked You · New Bump",
+        "note": "<b>New Bump</b> banner. Tap it or Chats → chats."
+      },
+      {
+        "id": "54:1616",
+        "title": "07 · Chats with new Bump",
+        "note": "<b>Chats</b> with the new Bump. Promo banner → paywall · Liked You tab → Liked You."
+      }
     ],
     "wiring": {
-      "209:1763": [ { "node": "Notifications", "to": "25:303", "tt": "dissolve", "td": 0.25 } ],
+      "209:1763": [
+        {
+          "node": "Notifications",
+          "to": "25:303",
+          "tt": "dissolve",
+          "td": 0.25
+        }
+      ],
       "25:303": [
-        { "node": "Like Card · Blurred", "to": "53:897", "tt": "move_in", "dir": "top" },
-        { "node": "Like Card · Revealed", "to": "53:897", "tt": "move_in", "dir": "top", "all": true },
-        { "node": "Button · See who liked you", "to": "53:940", "tt": "move_in", "dir": "top" }
+        {
+          "node": "Like Card · Blurred",
+          "to": "53:897",
+          "tt": "move_in",
+          "dir": "top"
+        },
+        {
+          "node": "Like Card · Revealed",
+          "to": "53:897",
+          "tt": "move_in",
+          "dir": "top",
+          "all": true
+        },
+        {
+          "node": "Button · See who liked you",
+          "to": "53:940",
+          "tt": "move_in",
+          "dir": "top"
+        }
       ],
       "53:897": [
-        { "node": "Close", "to": "25:303", "tt": "move_out", "dir": "bottom", "td": 0.25 },
-        { "node": "Primary Action", "to": "219:2241", "tt": "dissolve", "td": 0.25 },
-        { "node": "Gold Action", "to": "53:940", "tt": "push", "dir": "left" }
+        {
+          "node": "Close",
+          "to": "25:303",
+          "tt": "move_out",
+          "dir": "bottom",
+          "td": 0.25
+        },
+        {
+          "node": "Primary Action",
+          "to": "219:2241",
+          "tt": "dissolve",
+          "td": 0.25
+        },
+        {
+          "node": "Gold Action",
+          "to": "53:940",
+          "tt": "push",
+          "dir": "left"
+        }
       ],
-      "53:940": [ { "node": "Close", "to": "25:303", "tt": "move_out", "dir": "bottom", "td": 0.25 } ],
+      "53:940": [
+        {
+          "node": "Close",
+          "to": "25:303",
+          "tt": "move_out",
+          "dir": "bottom",
+          "td": 0.25
+        }
+      ],
       "53:1013": [
-        { "node": "Like", "to": "53:1072", "tt": "dissolve", "td": 0.2 },
-        { "node": "Pass", "to": "25:303", "tt": "move_out", "dir": "bottom", "td": 0.25 },
-        { "node": "Scrim 60%", "to": "25:303", "tt": "move_out", "dir": "bottom", "td": 0.25 }
+        {
+          "node": "Like",
+          "to": "53:1072",
+          "tt": "dissolve",
+          "td": 0.2
+        },
+        {
+          "node": "Pass",
+          "to": "25:303",
+          "tt": "move_out",
+          "dir": "bottom",
+          "td": 0.25
+        },
+        {
+          "node": "Scrim 60%",
+          "to": "25:303",
+          "tt": "move_out",
+          "dir": "bottom",
+          "td": 0.25
+        }
       ],
       "53:1072": [
-        { "node": "Primary Action", "to": "54:1406", "tt": "move_in", "dir": "top" },
-        { "node": "Secondary Action", "to": "53:1013", "tt": "dissolve", "td": 0.2 }
+        {
+          "node": "Primary Action",
+          "to": "54:1406",
+          "tt": "move_in",
+          "dir": "top"
+        },
+        {
+          "node": "Secondary Action",
+          "to": "53:1013",
+          "tt": "dissolve",
+          "td": 0.2
+        }
       ],
       "54:1406": [
-        { "node": "Close", "to": "53:1013", "tt": "move_out", "dir": "bottom", "td": 0.25 },
-        { "node": "Primary Action", "to": "54:1491", "tt": "dissolve", "td": 0.25 },
-        { "node": "Gold Action", "to": "53:940", "tt": "push", "dir": "left" }
+        {
+          "node": "Close",
+          "to": "53:1013",
+          "tt": "move_out",
+          "dir": "bottom",
+          "td": 0.25
+        },
+        {
+          "node": "Primary Action",
+          "to": "54:1491",
+          "tt": "dissolve",
+          "td": 0.25
+        },
+        {
+          "node": "Gold Action",
+          "to": "53:940",
+          "tt": "push",
+          "dir": "left"
+        }
       ],
       "54:1491": [
-        { "node": "Notification Banner", "to": "54:1616", "tt": "dissolve", "td": 0.25 },
-        { "node": "Tab Bar Item · Chats", "to": "54:1616", "tt": "instant" }
+        {
+          "node": "Notification Banner",
+          "to": "54:1616",
+          "tt": "dissolve",
+          "td": 0.25
+        },
+        {
+          "node": "Tab Bar Item · Chats",
+          "to": "54:1616",
+          "tt": "instant"
+        }
       ],
       "54:1616": [
-        { "node": "Promo Banner", "to": "53:940", "tt": "move_in", "dir": "top" },
-        { "node": "Tab Bar Item · Liked You", "to": "25:303", "tt": "instant" }
+        {
+          "node": "Promo Banner",
+          "to": "53:940",
+          "tt": "move_in",
+          "dir": "top"
+        },
+        {
+          "node": "Tab Bar Item · Liked You",
+          "to": "25:303",
+          "tt": "instant"
+        }
       ]
     }
   },
   "h1": {
     "title": "Bumpy · Liked You · H1 Proof of real",
     "heading": "H1 · Proof of real",
-    "lead": "Every blurred card shows the country, the reaction type, Verified and Active today (only when true). The paywall opens with the real counts.",
-    "panel_html": "<details class=\"hyp\"><summary>Hypothesis</summary><p><b>If</b> we show on every blurred card the sender’s country, the reaction type (Like / Hello) and “Active today” only when it is true, and open the paywall with real counts,</p><p><b>then</b> the share of Liked You openers who tap a card or “See who liked you” will increase, and so will Gold purchases per opener, with no rise in fake-profile reports,</p><p><b>because</b> today a like can’t be checked before paying (“I think they are bots to make me pay”), users ask for the country, and partial information makes people more curious than none.</p><p class=\"muted\">Primary metric: share of openers who tap a card or the CTA (baseline 3.1%). Guardrails: fake-profile reports, revenue per opener.</p></details>",
+    "lead": "Every blurred card shows the country, Verified, Active today (only when true) and a Like tag for Likes. The paywall opens with the real counts.",
+    "panel_html": "<details class=\"hyp\"><summary>Hypothesis</summary><p><b>If</b> we show on every blurred card the sender’s country, a Like tag when the reaction is a Like, and “Active today” only when it is true, and open the paywall with real counts,</p><p><b>then</b> the share of Liked You openers who tap a card or “See who liked you” will increase, and so will Gold purchases per opener, with no rise in fake-profile reports,</p><p><b>because</b> today a like can’t be checked before paying (“I think they are bots to make me pay”), users ask for the country, and partial information makes people more curious than none.</p><p class=\"muted\">Primary metric: share of openers who tap a card or the CTA (baseline 3.1%). Guardrails: fake-profile reports, revenue per opener.</p></details>",
     "other": "<p class=\"other\">Compare with <a href=\"../current/\">← Current flow</a></p>",
-    "alias": { "25:303": "219:1912", "53:940": "220:2316" },
-    "backgrounds": { "Background · Liked You": "219:1912", "Background · H1-02": "219:1912", "Background · H1-06": "220:2316" },
+    "alias": {
+      "25:303": "219:1912",
+      "53:940": "220:2316"
+    },
+    "backgrounds": {
+      "Background · Liked You": "219:1912",
+      "Background · H1-02": "219:1912",
+      "Background · H1-06": "220:2316"
+    },
     "screens": [
-      { "id": "219:1872", "title": "H1-01 · Push", "note": "<b>Push says what and where.</b> Reaction type + country + verified, never a name or photo, so it is safe with hidden previews. Tap → Liked You." },
-      { "id": "219:1912", "title": "H1-02 · Liked You · 3 reactions", "note": "<b>Blurred, but checkable.</b> Each card shows country, Like / Hello, Verified and Active today (only when true); the header shows the real counts. Card → reveal sheet · Verified / Active → trust sheet · CTA → paywall." },
-      { "id": "219:2125", "title": "H1-03 · Why you can trust this Like", "note": "<b>Answer “are they bots?” in place.</b> Where each signal comes from, plus two promises: no fake Likes, only the country before a reveal. Got it / scrim → Liked You." },
-      { "id": "219:2175", "title": "H1-04 · Reveal sheet", "note": "<b>Same signals at the decision point.</b> The ad reveal is unchanged in H1 (it is tested in H2). Watch ad → ad · See who liked you → paywall · X → Liked You." },
-      { "id": "219:2241", "title": "H1-05 · Rewarded ad", "note": "<b>Rewarded ad, as today.</b> Kept as in the current app to isolate H1. After 3 s → the current profile screen." },
-      { "id": "220:2316", "title": "H1-06 · Get Gold · real counts", "note": "<b>The paywall sells what the user has seen.</b> Same counts as the cards; blurred avatars are the real likers. Monthly pre-selected, price on the button, Restore / Terms / Privacy visible. Continue → App Store · X → Liked You." },
-      { "id": "220:2439", "title": "H1-07 · App Store purchase", "note": "<b>System purchase sheet</b> with plan, price and renewal terms. Tap the sheet to confirm · Cancel → paywall." },
-      { "id": "220:2479", "title": "H1-08 · Liked You · after Gold", "note": "<b>After Gold: back to the same list.</b> Everyone is revealed, the card the user came for is highlighted. Tap Ayesha → profile." },
-      { "id": "53:1013", "title": "03 · Profile after reveal (current)", "note": "<b>Current profile screen</b>, shared with the current flow. Like → dialog · Pass or scrim → Liked You." },
-      { "id": "53:1072", "title": "04 · Really interested? (current)", "note": "<b>Current dialog.</b> Like → free Like offer · Later → profile." },
-      { "id": "54:1406", "title": "05 · Free Like (current)", "note": "<b>Current free Like offer.</b> Watch Ad → Bump · Get 3 Likes per day → paywall." },
-      { "id": "54:1491", "title": "06 · New Bump (current)", "note": "<b>New Bump</b> banner. Tap it → chats." },
-      { "id": "54:1616", "title": "07 · Chats (current)", "note": "<b>Chats</b> with the new Bump." }
+      {
+        "id": "219:1872",
+        "title": "H1-01 · Push",
+        "note": "<b>Push says what and where.</b> Country + verified, never a name or photo, so it is safe with hidden previews. Tap → Liked You."
+      },
+      {
+        "id": "219:1912",
+        "title": "H1-02 · Liked You · 3 reactions",
+        "note": "<b>Blurred, but checkable.</b> Each card shows country, Verified and Active today (only when true), plus a Like tag for Likes; the header shows the real counts. Card → reveal sheet · Verified / Active → trust sheet · CTA → paywall."
+      },
+      {
+        "id": "219:2125",
+        "title": "H1-03 · Why you can trust this Like",
+        "note": "<b>Answer “are they bots?” in place.</b> Where each signal comes from, plus two promises: no fake Likes, only the country before a reveal. Got it / scrim → Liked You."
+      },
+      {
+        "id": "219:2175",
+        "title": "H1-04 · Reveal sheet",
+        "note": "<b>Same signals at the decision point.</b> Country, Verified and Active today stay on the sheet. The ad reveal is unchanged in H1 (it is tested in H2). Watch ad → ad · See who liked you → paywall · X → Liked You."
+      },
+      {
+        "id": "219:2241",
+        "title": "H1-05 · Rewarded ad",
+        "note": "<b>Rewarded ad, as today.</b> Kept as in the current app to isolate H1. After 3 s → the current profile screen."
+      },
+      {
+        "id": "220:2316",
+        "title": "H1-06 · Get Gold · real counts",
+        "note": "<b>The paywall sells what the user has seen.</b> Same counts as the cards; blurred avatars are the real likers. Monthly pre-selected, price on the button, Restore / Terms / Privacy visible. Continue → App Store · X → Liked You."
+      },
+      {
+        "id": "220:2439",
+        "title": "H1-07 · App Store purchase",
+        "note": "<b>System purchase sheet</b> with plan, price and renewal terms. Tap the sheet to confirm · Cancel → paywall."
+      },
+      {
+        "id": "220:2479",
+        "title": "H1-08 · Liked You · after Gold",
+        "note": "<b>After Gold: back to the same list.</b> Everyone is revealed, the card the user came for is highlighted. Tap Ayesha → profile."
+      },
+      {
+        "id": "53:1013",
+        "title": "03 · Profile after reveal (current)",
+        "note": "<b>Current profile screen</b>, shared with the current flow. Like → dialog · Pass or scrim → Liked You."
+      },
+      {
+        "id": "53:1072",
+        "title": "04 · Really interested? (current)",
+        "note": "<b>Current dialog.</b> Like → free Like offer · Later → profile."
+      },
+      {
+        "id": "54:1406",
+        "title": "05 · Free Like (current)",
+        "note": "<b>Current free Like offer.</b> Watch Ad → Bump · Get 3 Likes per day → paywall."
+      },
+      {
+        "id": "54:1491",
+        "title": "06 · New Bump (current)",
+        "note": "<b>New Bump</b> banner. Tap it → chats."
+      },
+      {
+        "id": "54:1616",
+        "title": "07 · Chats (current)",
+        "note": "<b>Chats</b> with the new Bump."
+      }
     ],
     "wiring": {
       "53:1013": [
-        { "node": "Like", "to": "53:1072", "tt": "dissolve", "td": 0.2 },
-        { "node": "Pass", "to": "25:303", "tt": "move_out", "dir": "bottom", "td": 0.25 },
-        { "node": "Scrim 60%", "to": "25:303", "tt": "move_out", "dir": "bottom", "td": 0.25 }
+        {
+          "node": "Like",
+          "to": "53:1072",
+          "tt": "dissolve",
+          "td": 0.2
+        },
+        {
+          "node": "Pass",
+          "to": "25:303",
+          "tt": "move_out",
+          "dir": "bottom",
+          "td": 0.25
+        },
+        {
+          "node": "Scrim 60%",
+          "to": "25:303",
+          "tt": "move_out",
+          "dir": "bottom",
+          "td": 0.25
+        }
       ],
       "53:1072": [
-        { "node": "Primary Action", "to": "54:1406", "tt": "move_in", "dir": "top" },
-        { "node": "Secondary Action", "to": "53:1013", "tt": "dissolve", "td": 0.2 }
+        {
+          "node": "Primary Action",
+          "to": "54:1406",
+          "tt": "move_in",
+          "dir": "top"
+        },
+        {
+          "node": "Secondary Action",
+          "to": "53:1013",
+          "tt": "dissolve",
+          "td": 0.2
+        }
       ],
       "54:1406": [
-        { "node": "Close", "to": "53:1013", "tt": "move_out", "dir": "bottom", "td": 0.25 },
-        { "node": "Primary Action", "to": "54:1491", "tt": "dissolve", "td": 0.25 },
-        { "node": "Gold Action", "to": "53:940", "tt": "push", "dir": "left" }
+        {
+          "node": "Close",
+          "to": "53:1013",
+          "tt": "move_out",
+          "dir": "bottom",
+          "td": 0.25
+        },
+        {
+          "node": "Primary Action",
+          "to": "54:1491",
+          "tt": "dissolve",
+          "td": 0.25
+        },
+        {
+          "node": "Gold Action",
+          "to": "53:940",
+          "tt": "push",
+          "dir": "left"
+        }
       ],
       "54:1491": [
-        { "node": "Notification Banner", "to": "54:1616", "tt": "dissolve", "td": 0.25 },
-        { "node": "Tab Bar Item · Chats", "to": "54:1616", "tt": "instant" }
+        {
+          "node": "Notification Banner",
+          "to": "54:1616",
+          "tt": "dissolve",
+          "td": 0.25
+        },
+        {
+          "node": "Tab Bar Item · Chats",
+          "to": "54:1616",
+          "tt": "instant"
+        }
       ],
       "54:1616": [
-        { "node": "Promo Banner", "to": "53:940", "tt": "move_in", "dir": "top" },
-        { "node": "Tab Bar Item · Liked You", "to": "25:303", "tt": "instant" }
+        {
+          "node": "Promo Banner",
+          "to": "53:940",
+          "tt": "move_in",
+          "dir": "top"
+        },
+        {
+          "node": "Tab Bar Item · Liked You",
+          "to": "25:303",
+          "tt": "instant"
+        }
       ]
+    },
+    "flag_override": {
+      "pakistan": "brazil"
     }
   }
 }
