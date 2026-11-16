@@ -1,0 +1,321 @@
+/* Generated from the Figma variables of Bumpy test task. Names follow the WEB code syntax set in Figma. */
+:root {
+  /* Primitives */
+  --prim-gold-50: #fffbe7;
+  --prim-gold-100: #faf1c6;
+  --prim-gold-150: #fbeda0;
+  --prim-gold-200: #f4e36f;
+  --prim-gold-250: #f3d559;
+  --prim-gold-300: #f2c541;
+  --prim-gold-350: #eaaf19;
+  --prim-gold-400: #e0a617;
+  --prim-gold-450: #d3990a;
+  --prim-gold-500: #c58d00;
+  --prim-gold-550: #b37e00;
+  --prim-gold-600: #a17000;
+  --prim-gold-650: #8f6200;
+  --prim-gold-700: #7e5400;
+  --prim-gold-750: #694500;
+  --prim-gold-800: #553600;
+  --prim-gold-850: #412800;
+  --prim-gold-900: #2e1a00;
+  --prim-gold-950: #190c00;
+  --prim-lemon-50: #fdfed1;
+  --prim-lemon-100: #f9faa5;
+  --prim-lemon-150: #f5f475;
+  --prim-lemon-200: #eae96e;
+  --prim-lemon-250: #dedd66;
+  --prim-lemon-300: #d2d15e;
+  --prim-lemon-350: #c5c456;
+  --prim-lemon-400: #b8b74d;
+  --prim-lemon-450: #abaa45;
+  --prim-lemon-500: #9f9e3d;
+  --prim-lemon-550: #8f8e33;
+  --prim-lemon-600: #807f2a;
+  --prim-lemon-650: #717020;
+  --prim-lemon-700: #626117;
+  --prim-lemon-750: #51500c;
+  --prim-lemon-800: #414003;
+  --prim-lemon-850: #313000;
+  --prim-lemon-900: #222100;
+  --prim-lemon-950: #111000;
+  --prim-blue-50: #f4fcff;
+  --prim-blue-100: #e5f7ff;
+  --prim-blue-150: #d6f0fb;
+  --prim-blue-200: #c5e8f7;
+  --prim-blue-250: #b1def0;
+  --prim-blue-300: #9ed4ea;
+  --prim-blue-350: #89c8e2;
+  --prim-blue-400: #73bdd9;
+  --prim-blue-450: #62b4d3;
+  --prim-blue-500: #51abcc;
+  --prim-blue-550: #4295b3;
+  --prim-blue-600: #3885a1;
+  --prim-blue-650: #2e758f;
+  --prim-blue-700: #24667e;
+  --prim-blue-750: #185569;
+  --prim-blue-800: #0d4455;
+  --prim-blue-850: #043342;
+  --prim-blue-900: #00232f;
+  --prim-blue-950: #00121a;
+  --prim-sky-50: #f4fbff;
+  --prim-sky-100: #e6f6ff;
+  --prim-sky-150: #d4f0ff;
+  --prim-sky-200: #bde9ff;
+  --prim-sky-250: #a2e0ff;
+  --prim-sky-300: #83d7ff;
+  --prim-sky-350: #61ccfc;
+  --prim-sky-400: #3bc0f6;
+  --prim-sky-450: #15b9f3;
+  --prim-sky-500: #00a6dc;
+  --prim-sky-550: #0096c7;
+  --prim-sky-600: #0086b2;
+  --prim-sky-650: #00769d;
+  --prim-sky-700: #006789;
+  --prim-sky-750: #005572;
+  --prim-sky-800: #00435c;
+  --prim-sky-850: #003346;
+  --prim-sky-900: #002332;
+  --prim-sky-950: #00121b;
+  --prim-pink-50: #fff8f8;
+  --prim-pink-100: #ffeff0;
+  --prim-pink-150: #ffe3e5;
+  --prim-pink-200: #ffd5d8;
+  --prim-pink-250: #ffc4c9;
+  --prim-pink-300: #ffb3ba;
+  --prim-pink-350: #ff9ea9;
+  --prim-pink-400: #fd8999;
+  --prim-pink-450: #f7758a;
+  --prim-pink-500: #f0607c;
+  --prim-pink-550: #e43b67;
+  --prim-pink-600: #d3345e;
+  --prim-pink-650: #bc2a52;
+  --prim-pink-700: #a62146;
+  --prim-pink-750: #8b1739;
+  --prim-pink-800: #720d2c;
+  --prim-pink-850: #590420;
+  --prim-pink-900: #410014;
+  --prim-pink-950: #260008;
+  --prim-green-50: #f0ffef;
+  --prim-green-100: #dbffd9;
+  --prim-green-150: #beffbb;
+  --prim-green-200: #94ff91;
+  --prim-green-250: #68fa6a;
+  --prim-green-300: #27fd0f;
+  --prim-green-350: #17e42f;
+  --prim-green-400: #04d627;
+  --prim-green-450: #00c722;
+  --prim-green-500: #00b81f;
+  --prim-green-550: #00a61b;
+  --prim-green-600: #009517;
+  --prim-green-650: #008313;
+  --prim-green-700: #00720f;
+  --prim-green-750: #005f0a;
+  --prim-green-800: #004c07;
+  --prim-green-850: #003904;
+  --prim-green-900: #002802;
+  --prim-green-950: #001501;
+  --prim-neutral-50: #fafafa;
+  --prim-neutral-100: #f1f1f1;
+  --prim-neutral-150: #e7e7e7;
+  --prim-neutral-200: #dddddd;
+  --prim-neutral-250: #d3d3d3;
+  --prim-neutral-300: #cacaca;
+  --prim-neutral-350: #c0c0c0;
+  --prim-neutral-400: #b7b7b7;
+  --prim-neutral-450: #a9a9a9;
+  --prim-neutral-500: #9c9c9c;
+  --prim-neutral-550: #8e8e8e;
+  --prim-neutral-600: #818181;
+  --prim-neutral-650: #696969;
+  --prim-neutral-700: #585858;
+  --prim-neutral-750: #474747;
+  --prim-neutral-800: #373737;
+  --prim-neutral-850: #292929;
+  --prim-neutral-900: #1c1c1c;
+  --prim-neutral-950: #0f0f0f;
+  --prim-red-50: #fff8f7;
+  --prim-red-100: #ffefed;
+  --prim-red-150: #ffe4e0;
+  --prim-red-200: #fed7d1;
+  --prim-red-250: #fec6be;
+  --prim-red-300: #feb5ab;
+  --prim-red-350: #fda296;
+  --prim-red-400: #fe8c7e;
+  --prim-red-450: #fe7466;
+  --prim-red-500: #fe564b;
+  --prim-red-550: #f5312d;
+  --prim-red-600: #e00013;
+  --prim-red-650: #ca0c15;
+  --prim-red-700: #b00b11;
+  --prim-red-750: #94030a;
+  --prim-red-800: #770307;
+  --prim-red-850: #5c0204;
+  --prim-red-900: #420102;
+  --prim-red-950: #260001;
+  --prim-teal-50: #ecfffb;
+  --prim-teal-100: #d1fff7;
+  --prim-teal-150: #a7fff1;
+  --prim-teal-200: #95f6e7;
+  --prim-teal-250: #86ebdc;
+  --prim-teal-300: #78e0d1;
+  --prim-teal-350: #68d3c4;
+  --prim-teal-400: #53c1b2;
+  --prim-teal-450: #4bbaab;
+  --prim-teal-500: #3dad9e;
+  --prim-teal-550: #2b9d8f;
+  --prim-teal-600: #188d80;
+  --prim-teal-650: #0c7d71;
+  --prim-teal-700: #026d62;
+  --prim-teal-750: #015a51;
+  --prim-teal-800: #014840;
+  --prim-teal-850: #013630;
+  --prim-teal-900: #012621;
+  --prim-teal-950: #001411;
+  --prim-base-white: #ffffff;
+  --prim-base-black: #000000;
+  --prim-base-screen: #f5f8fd;
+
+  /* Color (Light) */
+  --color-bg-screen: var(--prim-base-screen);
+  --color-bg-surface: var(--prim-base-white);
+  --color-bg-placeholder: var(--prim-neutral-200);
+  --color-bg-button-secondary: var(--prim-neutral-100);
+  --color-gold-edge: var(--prim-gold-350);
+  --color-gold-center: var(--prim-gold-200);
+  --color-gold-soft: var(--prim-gold-100);
+  --color-gold-soft-center: var(--prim-gold-50);
+  --color-action-primary: var(--prim-blue-500);
+  --color-status-verified: var(--prim-sky-450);
+  --color-status-online: var(--prim-green-300);
+  --color-accent-like: var(--prim-pink-550);
+  --color-accent-heart: var(--prim-pink-550);
+  --color-accent-pass: var(--prim-red-600);
+  --color-tag-interest: var(--prim-lemon-150);
+  --color-text-primary: var(--prim-base-black);
+  --color-text-active: var(--prim-neutral-800);
+  --color-text-secondary: var(--prim-neutral-650);
+  --color-text-disabled: var(--prim-neutral-400);
+  --color-text-on-media: var(--prim-base-white);
+  --color-text-muted: var(--prim-neutral-550);
+  --color-text-accent: var(--prim-blue-500);
+  --color-icon-inactive: var(--prim-neutral-400);
+  --color-icon-active: var(--prim-neutral-800);
+  --color-icon-primary: var(--prim-base-black);
+  --color-icon-on-media: var(--prim-base-white);
+  --color-border-tab-active: var(--prim-neutral-650);
+  --color-border-divider: var(--prim-neutral-150);
+  --color-border-strong: var(--prim-base-black);
+  --color-border-disabled: var(--prim-neutral-650);
+  --color-notify-start: var(--prim-teal-400);
+  --color-notify-end: var(--prim-blue-500);
+  --color-overlay-scrim: var(--prim-base-black);
+  --color-indicator-active: var(--prim-neutral-800);
+  --color-bg-inverse: var(--prim-base-black);
+  --color-bg-media-placeholder: var(--prim-neutral-850);
+  --color-annotation-error: var(--prim-red-600);
+  --color-annotation-improvement: var(--prim-blue-650);
+  --color-overlay-pressed: rgb(0 0 0 / 0.08);
+  --color-bg-chip-on-media: rgb(0 0 0 / 0.4);
+  --color-indicator-inactive: rgb(0 0 0 / 0.2);
+  --color-overlay-blur: rgb(255 255 255 / 0.01);
+  --color-action-primary-tint: rgb(81 171 204 / 0.1);
+  --color-bg-chip-light: rgb(255 255 255 / 0.85);
+
+  /* Typography */
+  --font-family-base: 'Open Sans', system-ui, sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-size-10: 10px;
+  --font-size-12: 12px;
+  --font-size-14: 14px;
+  --font-size-16: 16px;
+  --font-size-18: 18px;
+  --font-size-20: 20px;
+  --font-size-22: 22px;
+  --font-size-28: 28px;
+  --font-line-height-12: 12px;
+  --font-line-height-16: 16px;
+  --font-line-height-20: 20px;
+  --font-line-height-24: 24px;
+  --font-line-height-28: 28px;
+  --font-line-height-36: 36px;
+
+  /* Spacing */
+  --space-0: 0px;
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-6: 6px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-28: 28px;
+  --space-32: 32px;
+  --space-36: 36px;
+  --space-40: 40px;
+  --space-44: 44px;
+  --space-48: 48px;
+  --space-52: 52px;
+  --space-56: 56px;
+  --space-60: 60px;
+  --space-64: 64px;
+  --space-68: 68px;
+  --space-72: 72px;
+  --space-76: 76px;
+  --space-80: 80px;
+  --space-84: 84px;
+  --space-88: 88px;
+  --space-92: 92px;
+  --space-96: 96px;
+
+  /* Radius */
+  --radius-4: 4px;
+  --radius-8: 8px;
+  --radius-12: 12px;
+  --radius-16: 16px;
+  --radius-24: 24px;
+  --radius-full: 9999px;
+
+  /* Effects */
+  --shadow-raised: 0 2px 8px rgb(0 0 0 / 0.12);
+  --shadow-card: 0 4px 16px rgb(0 0 0 / 0.10);
+  --blur-12: blur(6px);
+  --blur-24: blur(12px);
+
+  /* Gradients */
+  --gradient-gold: linear-gradient(90deg, var(--color-gold-edge) 0%, var(--color-gold-center) 50%, var(--color-gold-edge) 100%);
+  --gradient-gold-soft: linear-gradient(90deg, var(--color-gold-soft) 0%, var(--color-gold-soft-center) 50%, var(--color-gold-soft) 100%);
+  --gradient-notify: linear-gradient(90deg, var(--color-notify-start), var(--color-notify-end));
+
+  /* Tone (default mode: Primary) */
+  --tone-icon: var(--prim-base-black);
+  --tone-label: var(--prim-base-black);
+}
+.tone-primary { --tone-icon: var(--prim-base-black); --tone-label: var(--prim-base-black); }
+.tone-active { --tone-icon: var(--prim-neutral-800); --tone-label: var(--prim-neutral-800); }
+.tone-inactive { --tone-icon: var(--prim-neutral-400); --tone-label: var(--prim-neutral-600); }
+.tone-media { --tone-icon: var(--prim-base-white); --tone-label: var(--prim-base-white); }
+
+/* Text styles (Figma: Title/22 SemiBold → .t-title-22-semibold) */
+.t-title-22-semibold { font-family: var(--font-family-base); font-weight: 600; font-size: 22px; line-height: 28px; letter-spacing: 0; }
+.t-title-20-bold { font-family: var(--font-family-base); font-weight: 700; font-size: 20px; line-height: 28px; letter-spacing: 0; }
+.t-title-18-bold { font-family: var(--font-family-base); font-weight: 700; font-size: 18px; line-height: 24px; letter-spacing: 0; }
+.t-title-18-semibold { font-family: var(--font-family-base); font-weight: 600; font-size: 18px; line-height: 24px; letter-spacing: 0; }
+.t-title-18-regular { font-family: var(--font-family-base); font-weight: 400; font-size: 18px; line-height: 24px; letter-spacing: 0; }
+.t-title-16-semibold { font-family: var(--font-family-base); font-weight: 600; font-size: 16px; line-height: 24px; letter-spacing: 0; }
+.t-display-28-bold { font-family: var(--font-family-base); font-weight: 700; font-size: 28px; line-height: 36px; letter-spacing: 0; }
+.t-button-14-bold { font-family: var(--font-family-base); font-weight: 700; font-size: 14px; line-height: 20px; letter-spacing: 0; }
+.t-body-14-regular { font-family: var(--font-family-base); font-weight: 400; font-size: 14px; line-height: 20px; letter-spacing: 0; }
+.t-body-14-semibold { font-family: var(--font-family-base); font-weight: 600; font-size: 14px; line-height: 20px; letter-spacing: 0; }
+.t-body-14-bold { font-family: var(--font-family-base); font-weight: 700; font-size: 14px; line-height: 20px; letter-spacing: 0; }
+.t-body-12-regular { font-family: var(--font-family-base); font-weight: 400; font-size: 12px; line-height: 16px; letter-spacing: 0; }
+.t-body-12-semibold { font-family: var(--font-family-base); font-weight: 600; font-size: 12px; line-height: 16px; letter-spacing: 0; }
+.t-body-12-bold { font-family: var(--font-family-base); font-weight: 700; font-size: 12px; line-height: 16px; letter-spacing: 0; }
+.t-caption-10-regular { font-family: var(--font-family-base); font-weight: 400; font-size: 10px; line-height: 16px; letter-spacing: 0; }
+.t-caption-10-semibold { font-family: var(--font-family-base); font-weight: 600; font-size: 10px; line-height: 16px; letter-spacing: 0; }
+.t-caption-10-bold { font-family: var(--font-family-base); font-weight: 700; font-size: 10px; line-height: 16px; letter-spacing: 0; }
+.t-body-12-link { font-family: var(--font-family-base); font-weight: 600; font-size: 12px; line-height: 16px; text-decoration: underline; }
+.t-caption-10-link { font-family: var(--font-family-base); font-weight: 700; font-size: 10px; line-height: 12px; text-decoration: underline; }
