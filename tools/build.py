@@ -343,6 +343,10 @@ def render_text(n, cls, st, a):
         st.append('white-space:nowrap')
     if n.get('tv') in ('C', 'B'):
         st.append('display:flex;flex-direction:column;justify-content:' + ('center' if n['tv'] == 'C' else 'flex-end'))
+        if n.get('ar') == 'W' and n.get('ta') == 'C':   # a one-line centred label that is wider than its box overflows evenly
+            st.append('align-items:center')
+    elif n.get('ar') == 'W' and n.get('ta') == 'C':
+        st.append('display:flex;justify-content:center')
     if len(segs) > 1:
         body = ''
         for s in segs:
@@ -359,10 +363,12 @@ def render_text(n, cls, st, a):
                 sst.append('text-decoration:underline')
             style = f' style="{";".join(sst)}"' if sst else ''
             body += f'<span{sc}{style}>{esc(s.get("c", "")).replace(chr(10), "<br>")}</span>'
-        if n.get('tv') in ('C', 'B'):
+        if n.get('tv') in ('C', 'B') or (n.get('ar') == 'W' and n.get('ta') == 'C'):
             body = f'<span>{body}</span>'
     else:
         body = esc(n['c']).replace('\n', '<br>')
+        if n.get('ar') == 'W' and n.get('ta') == 'C' and n.get('tv') not in ('C', 'B'):
+            body = f'<span>{body}</span>'
         if first.get('td') == 'UNDERLINE':
             st.append('text-decoration:underline')
     return f'<div class="{" ".join(cls)}"{a} style="{";".join(st)}">{body}</div>'
@@ -481,7 +487,10 @@ def replace_texts(x, rules):
                         if 'c' in sg: sg['c'] = sg['c'].replace(old, new)
                     if (n.get('ta') == 'C' or n.get('ar') == 'W') and len(new) > len(old):   # an auto-width or centred line keeps its centre
                         cx = n['x'] + n['w'] / 2
-                        n['w'] = max(n['w'], text_w(new, 12, '600') + 24); n['x'] = round(cx - n['w'] / 2); n['ta'] = 'C'
+                        ts = (n.get('seg') or [{}])[0].get('ts') or ''
+                        m = re.search(r'/(\d+)', ts); size = int(m.group(1)) if m else 12
+                        wt = '700' if re.search(r'Bold|Black', ts) and 'SemiBold' not in ts else '600'
+                        n['w'] = max(n['w'], text_w(new, size, wt if wt in FONT_W else '700') + 24); n['x'] = round(cx - n['w'] / 2); n['ta'] = 'C'
 
 
 RING_SVG = '<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="5" stroke="#26FC0F" stroke-width="2"/></svg>'
@@ -1019,16 +1028,7 @@ def build(key):
             dot = src and next(find_all(src, 'Badge Dot'), None)
             if dot and dst and not next(find_all(dst, 'Badge Dot'), None):
                 dst.setdefault('ch', []).append({**dot, 'x': dot['x'] - src['x'] + dst['x'], 'y': dot['y'] - src['y'] + dst['y']})
-        for scope, old, new in conf.get('text_override', {}).get(s['id'], []):
-            roots = list(find_all(scr, scope)) if scope else [scr]
-            for root in roots:
-                stack = [root]
-                while stack:
-                    x = stack.pop(); stack.extend(x.get('ch', []))
-                    if x.get('t') == 'TEX' and x.get('c') == old:
-                        x['c'] = new
-                        for sg in x.get('seg', []):
-                            if 'c' in sg: sg['c'] = sg['c'].replace(old, new)
+        replace_texts(scr, conf.get('text_override', {}).get(s['id'], []))
         for name, ms in conf.get('autohide', {}).get(s['id'], {}).items():
             for hit in find_all(scr, name):
                 hit['_go'] = {**(hit.get('_go') or {}), 'data-autohide': str(ms)}
