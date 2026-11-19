@@ -301,12 +301,15 @@
 
 /* Text styles (Figma: Title/22 SemiBold → .t-title-22-semibold) */
 .t-title-22-semibold { font-family: var(--font-family-base); font-weight: 600; font-size: 22px; line-height: 28px; letter-spacing: 0; }
+.t-title-26-semibold { font-family: var(--font-family-base); font-weight: 600; font-size: 26px; line-height: 32px; letter-spacing: 0; }
 .t-title-20-bold { font-family: var(--font-family-base); font-weight: 700; font-size: 20px; line-height: 28px; letter-spacing: 0; }
 .t-title-18-bold { font-family: var(--font-family-base); font-weight: 700; font-size: 18px; line-height: 24px; letter-spacing: 0; }
 .t-title-18-semibold { font-family: var(--font-family-base); font-weight: 600; font-size: 18px; line-height: 24px; letter-spacing: 0; }
 .t-title-18-regular { font-family: var(--font-family-base); font-weight: 400; font-size: 18px; line-height: 24px; letter-spacing: 0; }
 .t-title-16-semibold { font-family: var(--font-family-base); font-weight: 600; font-size: 16px; line-height: 24px; letter-spacing: 0; }
 .t-display-28-bold { font-family: var(--font-family-base); font-weight: 700; font-size: 28px; line-height: 36px; letter-spacing: 0; }
+.t-display-bump { font-family: var(--font-family-base); font-weight: 800; font-style: italic; font-size: 72px; line-height: 72px; letter-spacing: -0.02em; }
+.t-display-bump-small { font-family: var(--font-family-base); font-weight: 800; font-style: italic; font-size: 40px; line-height: 44px; letter-spacing: 0; }
 .t-button-14-bold { font-family: var(--font-family-base); font-weight: 700; font-size: 14px; line-height: 20px; letter-spacing: 0; }
 .t-body-14-regular { font-family: var(--font-family-base); font-weight: 400; font-size: 14px; line-height: 20px; letter-spacing: 0; }
 .t-body-14-semibold { font-family: var(--font-family-base); font-weight: 600; font-size: 14px; line-height: 20px; letter-spacing: 0; }
